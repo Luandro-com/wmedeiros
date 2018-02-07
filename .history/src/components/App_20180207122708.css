@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.App-container {
+  padding: 30px 5%;
+  display: flex;
+  align-content: center;
+}

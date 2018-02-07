@@ -1,0 +1,19 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Header-logo {
+  background: url('../logo.png');
+  background-size: cover;
+  width: 150px;
+  height: 300px;
+}
+
+.Header-nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

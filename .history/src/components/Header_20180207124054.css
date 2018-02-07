@@ -1,0 +1,35 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.Header-logo {
+  height: 100px;
+  width: 30%;
+}
+
+.Header-logo img {
+  height: 100px;
+  width: 52px;
+}
+
+.Header-button {
+  width: 35px;
+  height: 35px;
+}
+
+.Header-nav {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  .Header-nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

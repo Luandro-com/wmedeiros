@@ -1,0 +1,10 @@
+AddNew {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+AddNew form > * {
+  margin: 15px 0;
+}

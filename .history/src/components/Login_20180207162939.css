@@ -1,0 +1,8 @@
+.Login {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.Login input {
+  border: 2px solid #30A9DE;
+}

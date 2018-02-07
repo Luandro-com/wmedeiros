@@ -1,0 +1,50 @@
+.Projects {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Projects > * {
+  padding: 15px 0;
+}
+
+.Projects-item img {
+  width: 100%;
+}
+
+.Projects-item h3 {
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px 0;
+}
+
+@media (min-width: 640px) {
+  .Projects {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  .Projects > * {
+    padding: 25px 1.3%;
+  }
+  .Projects-item {
+    width: 30.3%;
+    cursor: pointer;
+  }
+  .Projects-image-container:hover {
+    transition: all 0.2s;
+    background: rgba(0,0,0,0.75);
+    z-index: 99;
+  }
+  .Projects-image-container:hover > img {
+    z-index: -1;
+  }
+  .Projects-item h3 {
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    top: -30px;
+  }
+}
+

@@ -1,0 +1,11 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,58 @@
+.Projects {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Projects > * {
+  padding: 15px 0;
+}
+
+.Projects-image-container {
+  background: #000;
+}
+
+.Projects-image-container img {
+  width: 100%;
+  transition: opacity 1s;
+}
+
+.Projects-item h3 {
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px 0;
+}
+
+
+@media (min-width: 640px) {
+  .Projects {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .Projects > * {
+    padding: 25px 1.3%;
+  }
+  .Projects-item {
+    width: 30.3%;
+    cursor: pointer;
+  }
+  .Projects-item h3 {
+    color: #fff;
+    text-transform: uppercase;
+    transition: opacity 1s;
+    text-align: left;
+    position: relative;
+    bottom: 60%;
+    left: 10%;
+    opacity: 0;
+  }
+  .Projects-image-container:hover img {
+    opacity: 0.25;
+  }
+  .Projects-image-container:hover + h3 {
+    opacity: 1;
+  }
+}
+

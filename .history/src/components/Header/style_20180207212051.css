@@ -1,0 +1,99 @@
+.Header-container {
+}
+
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.Header-logo {
+  height: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Header-logo h1 {
+  padding-top: 30px;
+}
+
+.Header-logo img {
+  height: 100px;
+  width: 52px;
+}
+
+.Header-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 15%;
+}
+
+.Header-button img, .Header-modal-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.Header-nav {
+  display: none;
+}
+
+.Header-nav-active {
+  color: #F6B352;
+}
+
+.Header-modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Header-modal-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.Header-modal-body {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Header-modal-body a {
+  color: #fff;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 10% 0;
+  text-transform: uppercase;
+}
+
+.Header-modal-open {
+  display: flex;
+}
+
+.Header-modal-closed {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .Header-button {
+    display: none;
+  }
+  .Header-nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

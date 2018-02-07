@@ -1,0 +1,13 @@
+.Projects {
+  text-align: center;
+}
+
+.Projects img {
+  width: 80%;
+  margin: 15px 0;
+}
+
+.Projects p {
+  text-transform: uppercase;
+  text-align: left;
+}

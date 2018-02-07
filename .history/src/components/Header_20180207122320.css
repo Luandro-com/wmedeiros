@@ -1,0 +1,24 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.Header-logo {
+  height: 100px;
+  width: 30%;
+}
+
+.Header-logo img {
+  height: 100px;
+  width: 52px;
+}
+
+.Header-nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
