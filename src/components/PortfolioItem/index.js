@@ -3,10 +3,6 @@ import firebase from 'firebase';
 import './style.css';
 
 export default class extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   onComponentDidMount() {
     const ref = firebase.database().ref("portfolio");
     ref.once("value")
