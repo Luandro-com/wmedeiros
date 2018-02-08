@@ -8,6 +8,10 @@
   padding: 10px 20px;
 }
 
+.Header a {
+  color: #000;
+}
+
 .Header-logo {
   height: 100px;
   width: 80%;

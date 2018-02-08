@@ -2,7 +2,7 @@ body {
   font-family: 'Lato', sans-serif
 }
 a {
-  color: #000;
+  color: #30A9DE;
   text-decoration: none;
 }
 
@@ -13,11 +13,15 @@ input, textarea {
 }
 
 button {
-  padding: 20px;
+  padding: 10px 12px;
   background: #30A9DE;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-size: 1em;
   border-radius: 15px;
+}
+
+h1 {
+  font-size: 1.2em;
 }

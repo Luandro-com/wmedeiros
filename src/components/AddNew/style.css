@@ -2,9 +2,49 @@
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  padding-top: 80px;
+}
+
+.AddNew input {
+  width: 100%;
+}
+
+.AddNew h3 {
+  padding-bottom: 25px;
+  font-size: 1.5em;
+}
+
+.AddNew section {
+  padding: 25px 0;
 }
 
 .AddNew form > * {
   margin: 15px 0;
+}
+
+.AddNew-dropzone {
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #30A9DE;
+  width: 250px;
+  height: 200px;
+  vertical-align: middle
+}
+
+.AddNew-editor {
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #30A9DE;
+}
+
+.AddNew-completed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .AddNew {
+    width: 45%;
+    text-align: left;
+  }
 }

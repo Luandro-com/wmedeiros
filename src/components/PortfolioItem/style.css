@@ -1,0 +1,39 @@
+.PortfolioItem {
+  padding-bottom: 30%;
+}
+
+.PortfolioItem-user-control {
+  position: fixed;
+}
+
+.parallax {
+  z-index: -1;
+}
+
+.PortfolioItem-header-image-inside {
+  height: 300px;
+  width: 100%;
+}
+
+.PortfolioItem-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.PortfolioItem-header-title {
+  padding: 30px 0;
+}
+
+.PortfolioItem-header-title h1 {
+  padding-bottom: 15px;
+}
+
+.PortfolioItem-header-title hr {
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .PortfolioItem-header-image-inside {
+    height: 500px;
+  }
+}
