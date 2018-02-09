@@ -12,6 +12,7 @@
   align-items: center;
   padding: 0 20px;
   margin: 0 auto;
+  z-index: 9;
 }
 
 .Header a {
@@ -60,6 +61,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
 }
 
 .Header-modal-button {

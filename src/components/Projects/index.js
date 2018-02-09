@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 
 const Loader = () => <div className="Projects-loading">
   <Spinner name="folding-cube" color="#000" className="Projects-loading-svg" />
-  <h2>Bem vindos ao portfólio prossifional de arquitetura de Wesley Medeiros</h2>
+  <h2>Bem vindo ao portfólio prossifional de arquitetura de Wesley Medeiros</h2>
   <hr />
-  <h3>Aguarde um instante enquanto carregamos os projetos</h3>
+  <h3>carregando...</h3>
 </div>
 
 class View extends Component {
