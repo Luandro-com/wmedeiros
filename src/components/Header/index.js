@@ -1,8 +1,6 @@
 import React, { Component} from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import { Subscribe } from 'unstated';
-import AuthContainer from '../../containers/Auth';
 import './style.css';
 // import Logo from './logo.png';
 import Menu from './menu.svg';
@@ -45,30 +43,27 @@ const Links = ({ className, close, uid, logout }) => (
   }
 
   render () {
+    const { auth } = this.props
     return (
-      <Subscribe to={[AuthContainer]}>
-        { auth =>
-          <div className="Header-container">
-            <div className="Header-modal" style={ this.state.modalOpen ? { display: 'flex' } : { display: 'none' }}>
-              <div onClick={this.handleClose} className="Header-modal-button">
-                <img src={Close} alt="close" />
-              </div>
-              <br />
-              <Links className="Header-modal-body" uid={auth.state.uid} />
-            </div>
-            <header className="Header" style={ !this.state.modalOpen ? { display: 'flex' } : { display: 'none' }}>
-              <Link className="Header-logo" to="/">
-                {/* <img src={ Logo } alt="Wesley Medeiros Arquitetura" /> */}
-                <h1>Wesley Medeiros Arquitetura {auth.uid}</h1>
-              </Link>
-              <div onClick={this.handleOpen} className="Header-button">
-                <img src={Menu} alt="menu" />
-              </div>
-              <Links className="Header-nav" close={this.handleClose} uid={auth.state.uid} logout={auth.logout} />
-            </header>
+      <div className="Header-container">
+        <div className="Header-modal" style={ this.state.modalOpen ? { display: 'flex' } : { display: 'none' }}>
+          <div onClick={this.handleClose} className="Header-modal-button">
+            <img src={Close} alt="close" />
           </div>
-        }
-      </Subscribe>
+          <br />
+          <Links className="Header-modal-body" uid={auth.state.uid} />
+        </div>
+        <header className="Header" style={ !this.state.modalOpen ? { display: 'flex' } : { display: 'none' }}>
+          <Link className="Header-logo" to="/">
+            {/* <img src={ Logo } alt="Wesley Medeiros Arquitetura" /> */}
+            <h1>Wesley Medeiros Arquitetura</h1>
+          </Link>
+          <div onClick={this.handleOpen} className="Header-button">
+            <img src={Menu} alt="menu" />
+          </div>
+          <Links className="Header-nav" close={this.handleClose} uid={auth.state.uid} logout={auth.logout} />
+        </header>
+      </div>
     );
   }
 }

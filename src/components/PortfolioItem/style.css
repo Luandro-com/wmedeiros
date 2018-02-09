@@ -7,7 +7,7 @@
   left: 50%;
   width: 500px;
   height: 500px;
-  margin-top: -250px; /* Half the height */
+  margin-top: -550px; /* Half the height */
   margin-left: -250px; /* Half the width */
 }
 
@@ -41,6 +41,7 @@
   margin-bottom: -30px;
   position: relative;
   top: -25px;
+  cursor: pointer;
 }
 
 .PortfolioItem-header-title h1 {
@@ -50,9 +51,27 @@
 .PortfolioItem-header-title hr {
   color: #000;
 }
+@media (min-width: 500px) {
+  .PortfolioItem img {
+    width: 720px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .PortfolioItem-header-button {
+    left: 10%;
+  }
+}
 
 @media (min-width: 1024px) {
-  .PortfolioItem-header-image-inside {
-    height: 500px;
+  .PortfolioItem img {
+    width: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .PortfolioItem img {
+    width: 1600px;
   }
 }

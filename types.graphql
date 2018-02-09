@@ -1,0 +1,47 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+# Uncomment the model below as well
+
+# added by email-password template: (please uncomment)
+type User @model {
+  # Required system field:
+  id: ID! @isUnique # read-only (managed by Graphcool)
+  role: String!
+  # Optional system fields (remove if not needed):
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+  email: String! @isUnique
+  password: String!
+}
+
+type File @model {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type Project @model {
+  slug: ID! @isUnique
+  title: String!
+  headerImage: String!
+  images: [String]!
+  # Every relation also required a back-relation (to determine 1:1, 1:n or n:m)
+  author: User! @relation(name: "UserProject")
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+}
+
+type Info @model {
+  id: ID! @isUnique
+  address: String
+  phone: String
+  facebook: String
+  instagram: String
+  about: String
+}

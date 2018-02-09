@@ -5,6 +5,37 @@
   margin: 0 auto;
 }
 
+.Projects-loading, .Projects-loading-svg {
+  position: absolute;
+  top: 50%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 90%; /* Need a specific value to work */
+}
+
+.Projects-loading-svg {
+  width: 100px;
+  top: -125px;
+}
+
+.Projects-loading h2 {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.Projects-loading hr {
+  width: 50%;
+}
+
+.Projects-loading h3 {
+  font-size: 0.8em;
+  color: #D0D0D0;
+  padding-top: 24px;
+  font-weight: 100;
+}
+
 .Projects-item {
   padding: 25px 0;
   height: 200px;
@@ -12,6 +43,8 @@
 
 .Projects-image-container {
   background: #000;
+  height: 200px;
+  line-height: 200px;
 }
 
 .Projects-image-container img {
@@ -68,6 +101,10 @@
 }
 
 @media (min-width: 720px) {
+  .Projects-loading-svg {
+    width: 150px;
+    top: -100%;
+  }
   .Projects-item {
     width: 30%;
   }

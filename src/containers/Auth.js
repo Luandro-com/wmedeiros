@@ -3,7 +3,9 @@ import firebase from 'firebase';
 
 export default class extends Container {
   state = {
-    uid: null
+    uid: null,
+    name: null,
+    role: null,
   };
 
   check = () => {
@@ -44,6 +46,8 @@ export default class extends Container {
   }
 
   logout = () => {
+    firebase.auth().signOut()
     this.setState({ uid: null });
+    
   }
 }

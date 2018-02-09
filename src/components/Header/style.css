@@ -43,6 +43,10 @@
   display: none;
 }
 
+.Header-nav div {
+  cursor: pointer;
+}
+
 .Header-nav-active {
   color: #F6B352;
 }

@@ -57,31 +57,38 @@ class LoadData extends Component {
     const { data, slug, uid, remove, push } = this.props
     if (data.length > 0) {
       return data.filter((item) => item.slug === slug)
-        .map(project => <div key={slug}>
-          <div className="PortfolioItem-user-control">
-            {uid && <button>Editar</button>}
-            {uid && <button onClick={() => remove(project.id, push('/'))} style={{ background: '#E53A40'}}>Deletar</button>}
-          </div>
-          <View {...project} openLightbox={() => this.setState({ isOpen: true })} />
-          {lightboxOpen && (
-            <Lightbox
-              mainSrc={images[photoIndex]}
-              nextSrc={images[(photoIndex + 1) % images.length]}
-              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-              onCloseRequest={() => this.setState({ isOpen: false })}
-              onMovePrevRequest={() =>
-                this.setState({
-                  photoIndex: (photoIndex + images.length - 1) % images.length,
-                })
-              }
-              onMoveNextRequest={() =>
-                this.setState({
-                  photoIndex: (photoIndex + 1) % images.length,
-                })
-              }
-            />
-          )}
-        </div>)
+        .map((project, key) => {
+          if (key === 0) {
+            return (
+              <div key={slug}>
+                <div className="PortfolioItem-user-control">
+                  {uid && <button>Editar</button>}
+                  {uid && <button onClick={() => remove(project.id, push('/'))} style={{ background: '#E53A40'}}>Deletar</button>}
+                </div>
+                <View {...project} openLightbox={() => this.setState({ isOpen: true })} />
+                {lightboxOpen && (
+                  <Lightbox
+                    mainSrc={images[photoIndex]}
+                    nextSrc={images[(photoIndex + 1) % images.length]}
+                    prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                    onCloseRequest={() => this.setState({ isOpen: false })}
+                    onMovePrevRequest={() =>
+                      this.setState({
+                        photoIndex: (photoIndex + images.length - 1) % images.length,
+                      })
+                    }
+                    onMoveNextRequest={() =>
+                      this.setState({
+                        photoIndex: (photoIndex + 1) % images.length,
+                      })
+                    }
+                  />
+                )}
+              </div>
+            )
+          }
+          return null
+        })
     }
     return (
       <h1>Carregando</h1>

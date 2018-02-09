@@ -1,0 +1,26 @@
+.About {
+  padding-top: 60px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.About-image-container, .About-image-container img {
+  height: 300px;
+}
+
+.About-image-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.About-text-container {
+  padding: 50px 0 100px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .About {
+  }
+}

@@ -1,0 +1,21 @@
+.Contact {
+  padding-top: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
+.Contact-container {
+  width: 90%;
+  border: 2px solid #000;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.Contact h2 {
+  font-size: 1.5em;
+  padding: 15px 0;
+}
+
+@media (min-width: 640px) {
+  .Contact {
+  }
+}

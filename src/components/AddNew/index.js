@@ -83,7 +83,8 @@ export default class extends Component {
       headerImage: completedImages[headerImage],
       images: completedImages,
       text:  mediumDraftExporter(editorState.getCurrentContent()),
-      slug: slugify(title.toLowerCase() + ' ' + postId)
+      slug: slugify(title.toLowerCase() + ' ' + postId),
+      created: Date.now()
     }
     return (
       <Subscribe to={[ProjectsContainer]}>

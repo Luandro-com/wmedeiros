@@ -28,7 +28,7 @@ export default class extends Container {
     }
     const projects = []
     const ref = firebase.database().ref(refKey)
-    ref.on('value', (snapshot) => {
+    ref.once('value', (snapshot) => {
       snapshot.forEach(data => {
         const itemData = data.val()
         itemData.id = data.key

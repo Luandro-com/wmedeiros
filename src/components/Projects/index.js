@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import { Subscribe } from 'unstated';
 import ProgressiveImage from 'react-progressive-image';
+import Spinner from 'react-spinkit';
 import ProjectsContainer from '../../containers/Projects';
 import './style.css';
 import { Link } from 'react-router-dom';
+
+const Loader = () => <div className="Projects-loading">
+  <Spinner name="folding-cube" color="#000" className="Projects-loading-svg" />
+  <h2>Bem vindos ao portfólio prossifional de arquitetura de Wesley Medeiros</h2>
+  <hr />
+  <h3>Aguarde um instante enquanto carregamos os projetos</h3>
+</div>
 
 class View extends Component {
   componentDidMount() {
     const { loading, data, load } = this.props
     if (loading && data.length < 1) {
-      console.log('load data')
+      console.log('Start loading projects data.')
       load()
     }
   }
@@ -18,16 +26,16 @@ class View extends Component {
     const { loading, data} = this.props
     return (
       <div className="Projects">
-        {loading && <h1>Carregando</h1>}
+        {loading && <Loader />}
         {(!loading && data.length > 0) &&  data.map((item, key) => {
           const { title, headerImage, slug } = item
           return (
             <Link key={key} to={`p/${slug}`} className="Projects-item">
               <div className="Projects-image-container">
-                <ProgressiveImage src={ headerImage } placeholder='http://via.placeholder.com/500'>
-                  {(src, loading) => (
-                    loading 
-                      ? <p style={{ color: '#fff' }}>Loading</p>
+                <ProgressiveImage src={ headerImage }>
+                  {(src, imgLoading) => (
+                    imgLoading 
+                      ? <Spinner name="three-bounce" color="#D0D0D0"/>
                       : <img src={src} alt={title}/>
                   )}
                 </ProgressiveImage>

@@ -24,7 +24,7 @@ export default ({ location }) => (
       return (
         <Router>
           <div className="App-container">
-            <Header />
+            <Header auth={auth} />
             <Route
               render={({ location }) => (
                   <Switch location={location}>
