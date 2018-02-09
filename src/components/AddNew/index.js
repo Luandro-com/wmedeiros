@@ -81,6 +81,7 @@ export default class extends Component {
     const postData = {
       title,
       headerImage: completedImages[headerImage],
+      images: completedImages,
       text:  mediumDraftExporter(editorState.getCurrentContent()),
       slug: slugify(title.toLowerCase() + ' ' + postId)
     }

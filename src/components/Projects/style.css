@@ -1,4 +1,5 @@
 .Projects {
+  padding-top: 100px;
   text-align: center;
   width: 80%;
   margin: 0 auto;
@@ -6,6 +7,7 @@
 
 .Projects-item {
   padding: 25px 0;
+  height: 200px;
 }
 
 .Projects-image-container {
@@ -23,12 +25,14 @@
   text-transform: uppercase;
   text-align: left;
   padding: 5px 0;
+  font-size: 1.2em;
 }
 
 
-@media (min-width: 640px) {
+@media (min-width: 440px) {
   .Projects {
-    width: 95%;
+    padding-top: 0;
+    width: 100%;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -38,7 +42,7 @@
     padding: 25px 1.3%;
   }
   .Projects-item {
-    width: calc(33.3333% - 20px);
+    width: calc(50% - 20px);
     cursor: pointer;
   }
   .Projects-item h3 {
@@ -46,11 +50,14 @@
     text-transform: uppercase;
     transition: opacity 1s;
     text-align: left;
-    position: relative;
-    bottom: 60%;
-    left: 10%;
     opacity: 0;
-    margin-bottom: -50px;
+    height: 200px;
+    margin-bottom: -200px;
+    position: relative;
+    top: -180px;
+    left: 25px;
+    width: 80%;
+    pointer-events: none;
   }
   .Projects-image-container:hover img {
     opacity: 0.25;
@@ -60,8 +67,14 @@
   }
 }
 
+@media (min-width: 720px) {
+  .Projects-item {
+    width: 30%;
+  }
+}
+
 @media (min-width: 1024px) {
   .Projects-item {
-    width: 22.2%;
+    width: calc(22.2%);
   }
 }
