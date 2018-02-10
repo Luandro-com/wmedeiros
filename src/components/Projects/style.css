@@ -45,6 +45,8 @@
   background: #000;
   height: 200px;
   line-height: 200px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .Projects-image-container img {

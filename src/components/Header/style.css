@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
   padding: 0 20px;
   margin: 0 auto;
   z-index: 9;
@@ -21,8 +22,13 @@
 
 .Header-logo, .Header-logo img {
   height: 75px;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+}
+
+.Header-logo img {
+  height: 50px;
+  padding-top: 7px;
 }
 
 .Header-logo h1 {

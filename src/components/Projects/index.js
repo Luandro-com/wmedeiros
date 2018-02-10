@@ -35,7 +35,7 @@ class View extends Component {
                 <ProgressiveImage src={ headerImage }>
                   {(src, imgLoading) => (
                     imgLoading 
-                      ? <Spinner name="three-bounce" color="#D0D0D0"/>
+                      ? <Spinner name="circle" color="#fff"/>
                       : <img src={src} alt={title}/>
                   )}
                 </ProgressiveImage>

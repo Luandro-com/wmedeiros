@@ -13,6 +13,7 @@ import About from '../components/About'
 import Contact from '../components/Contact'
 import Login from '../components/Login'
 import AddNew from '../components/AddNew'
+import Settings from '../components/Settings'
 import PortfolioItem from '../components/PortfolioItem'
 
 function mapStyles(styles) {
@@ -60,7 +61,7 @@ export default ({ location }) => (
           <div className="App-container">
             <Header auth={auth} />
               <Route
-                render={({ location }) => (
+                render={({ location, history }) => (
                   <AnimatedSwitch
                     atEnter={bounceTransition.atEnter}
                     atLeave={bounceTransition.atLeave}
@@ -71,16 +72,17 @@ export default ({ location }) => (
                     <Route exact path="/" component={Projects}/>
                     <Route path="/sobre" component={About}/>
                     <Route path="/contato" component={Contact}/>
-                    <Route path="/login" render={() => (
-                      auth.state.uid ? (
-                        <Redirect to="/novo"/>
-                      ) : (
-                        <Login/>
-                      )
-                    )}/>
+                    <Route path="/login" render={() => auth.state.uid ? history.goBack() : <Login/> }/>
                     <Route path="/novo" render={props => (
                       auth.state.uid ? (
                         <AddNew {...props} />
+                      ) : (
+                        <Redirect to="/login"/>
+                      )
+                    )}/>
+                    <Route path="/config" render={props => (
+                      auth.state.uid ? (
+                        <Settings {...props} />
                       ) : (
                         <Redirect to="/login"/>
                       )

@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import './style.css';
-// import Logo from './logo.png';
+import Logo from './logo.svg';
 import Menu from './menu.svg';
 import Close from './close.svg';
 
@@ -55,8 +55,8 @@ const Links = ({ className, close, uid, logout }) => (
         </div>
         <header className="Header" style={ !this.state.modalOpen ? { display: 'flex' } : { display: 'none' }}>
           <Link className="Header-logo" to="/">
-            {/* <img src={ Logo } alt="Wesley Medeiros Arquitetura" /> */}
-            <h1>Wesley Medeiros Arquitetura</h1>
+            <img src={ Logo } alt="Wesley Medeiros Arquitetura" />
+            {/* <h1>Wesley Medeiros Arquitetura</h1> */}
           </Link>
           <div onClick={this.handleOpen} className="Header-button">
             <img src={Menu} alt="menu" />
